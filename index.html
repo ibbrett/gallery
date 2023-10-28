@@ -1,0 +1,74 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+div.gallery {
+  /* margin: 5px;
+  border: 1px solid #ccc;*/
+  float: left;
+  width: 100%;
+  margin: 0 50px 50px 0;
+  max-width: 500px;
+}
+
+
+div.gallery:hover {
+  /*border: 1px solid #777;*/
+  color: green;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+@media screen and (min-width: 501px) {
+  div.gallery {
+    width: 40%;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<script>
+
+  const images = [
+    { name: "waimea-valley-01.jpg", title: "Cool Image One", desc: "Lorem ipsum dolor sit amet" },
+    { name: "waimea-valley-02.jpg", title: "Cool Image Two", desc: "Consectetur adipiscing elit" },
+    { name: "waimea-valley-03.jpg", title: "Cool Image Three", desc: "Donec non lorem in mauris mattis pretium" },
+    { name: "waimea-valley-04.jpg", title: "Cool Image Four", desc: "Proin tristique, urna ut elementum posuere, sapien enim finibus metus, at accumsan sapien massa tincidunt nunc" },
+    { name: "waimea-valley-05.jpg", title: "Cool Image Five", desc: "Ut ullamcorper dignissim finibus" },
+    { name: "waimea-valley-06.jpg", title: "Cool Image Six", desc: "Fusce imperdiet fermentum fringilla" },
+    { name: "waimea-valley-07.jpg", title: "Cool Image Seven", desc: "Nam rutrum placerat ante, ut tristique ante elementum in" },
+    { name: "waimea-valley-08.jpg", title: "Cool Image Eight", desc: "Praesent sed lacinia tortor, non finibus justo" },
+    { name: "waimea-valley-09.jpg", title: "Cool Image Nine", desc: "Etiam at leo id felis pulvinar porta nec vitae odio" },
+    { name: "waimea-valley-10.jpg", title: "Cool Image Ten", desc: "Aliquam erat volutpat" },
+  ];
+
+  images.forEach( image => {
+    const imageItem = `<div class="gallery">
+      <a target="_blank" title="${image.title}" href="${image.name}">
+        <img src="images/${image.name}" alt="${image.title}">
+      </a>
+      <div class="desc">${image.desc}</div>
+    </div>`;
+    document.write(imageItem);
+  });
+
+</script>
+
+</body>
+</html>
